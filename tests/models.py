@@ -27,6 +27,7 @@ class Product:
             Если продуктов не хватает, то выбросите исключение ValueError
         """
         if self.check_quantity(quantity):
+            self.quantity -= quantity
             print('Product has been added to Cart successfully')
         else:
             raise ValueError('Not enough Product on stock')
